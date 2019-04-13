@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const client2 = new Discord.Client();
-const myid = [''];
-const prefix = ['-'];
+const myid = ['556425137067524128'];
+const prefix = ['!'];
 
 client.on('ready', () => {
    console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : Kahrbaa `);
+   console.log(`Credit Farmm - Script By : Dave `);
    console.log(`----------------`);
    console.log(`Loadinng`);
    console.log(`Loadinng.`);
@@ -46,8 +46,8 @@ client.on('message', message => {
 if (message.content === prefix+'spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 40000; x++) {
-        message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
+      for(let x = 0; x < 90000; x++) {
+        message.channel.send(`**استغفر الله وسبحان واتوب اله ولا الاه الا الله **[ " ${x} " ]`)
           .then(m => {
             count++;
           })
@@ -97,7 +97,7 @@ client2.on('message', message => {
 if (message.content === prefix+'spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 40000; x++) {
+      for(let x = 0; x < 90000; x++) {
         message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
           .then(m => {
             count++;
@@ -125,6 +125,19 @@ if (!rank) return message.reply(' ')
     message.delete();
   }
 });
+
+
+client.on('message' , message => {
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send('pong').then((msg) => {
+var PinG = `${Date.now() - msg.createdTimestamp}`
+var ApL = `${Math.round(client.ping)}`
+      msg.edit(`\`\`\`javascript\nTime taken: ${PinG} ms.\nDiscord API: ${ApL} ms.\`\`\``);
+ })
+  }  
+ });
+
 
 
 client.login(process.env.TOKEN);
