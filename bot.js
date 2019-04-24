@@ -6,7 +6,7 @@ console.log("Scrpit By Dream");
 client.on("ready", () => {
 let channel =     client.channels.get("568365914190381056")
 setInterval(function() {
-channel.send(` Made From  before Dave`);
+channel.send(` Made From  before Dave s ض س سث ض ض س`);
 }, 10)
 })
 
